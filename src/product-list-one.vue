@@ -5,23 +5,28 @@
       <li class="name">{{product.name}}</li>
       <li class="price">{{product.price}}</li>
     </ul>
-    <button v-on:click="onReduceBtnClick(4)">Reduce Price by 5%</button>
+    <button v-on:click="reducePrice(4)">Reduce Price by 5%</button>
   </div>
 </template>
 <script>
+import {mapActions, mapGetters} from 'vuex';
 
 export default {
   methods: {
-    // onReduceBtnClick: () => this.$store.state.products.forEach(ele => ele.price *= 95 / 100;
-    onReduceBtnClick: function (price) {
-      this.$store.dispatch("reducePrice", price)
-    }
   },
   computed: {
     products() {
       return this.$store.state.products;
     },
+    ...mapGetters([
+      'saleProducts',
+    ])
   },
+  methods: {
+    ...mapActions([
+      'reducePrice'
+    ])
+  }
 }
 </script>
 <style scoped>
