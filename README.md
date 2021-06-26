@@ -1,18 +1,14 @@
 # vuex-tutorial
 
-> vuex tutorial
+## 20210626
+Vuex Done!
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+<pre>
+Vuex // by npm install vuex
+Store and store.js // should register on main.js
+getters
+mutations // almost equal as setters
+actions
+...mapGetters, // To use it on webpack-simple,
+...mapActions // We should setup babel
+</pre>
